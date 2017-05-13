@@ -20,108 +20,108 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 vi:
-  welcome: "Welcome to the"
-  title_page: "Book Review System"
-  home: "Home"
+  welcome: "Chào mừng đến với"
+  title_page: "Hệ Thống Đánh Giá Sách"
+  home: "Trang Chủ"
   slogan: "Meet your next favourite book"
   framgia: "Framgia VietNam"
-  posted_ago: "Posted %{time} ago"
-  sort: "Sort"
+  posted_ago: "Đã đăng %{time} ago"
+  sort: "Sắp xếp"
 
   buttons:
-    new: "New"
-    edit: "Edit"
-    delete: "Delete"
-    reply: "Reply"
-    comment: "Comment"
-    commenting: "Commenting.."
-    save: "Save"
-    saving: "Saving"
-    follow: "Follow"
-    unfollow: "Unfollow"
-    report: "Report"
-    cancel: "Cancel"
-    view_all: "View all"
-    add_condition: "Add condition"
-    search: "Search"
+    new: "Thêm"
+    edit: "Sửa"
+    delete: "Xoá"
+    reply: "Trả lời"
+    comment: "Bình luận"
+    commenting: "Đang bình luận.."
+    save: "Lưu"
+    saving: "Đang lưu"
+    follow: "Theo dõi"
+    unfollow: "Bỏ theo dõi"
+    report: "Báo cáo"
+    cancel: "Huỷ"
+    view_all: "Xem tất cả"
+    add_condition: "Thêm điều kiện"
+    search: "Tìm kiếm"
 
   form:
-    confirmation: "Are you sure?"
-    error: "error"
-    inform_error: "The form contain %{error}"
+    confirmation: "Bạn chắc chắn chưa?"
+    error: "lỗi"
+    inform_error: "Form chứa %{error}"
 
   comments:
     header:
-      content: "Enter comment ..."
+      content: "Nhập bình luận ..."
 
   reviews:
     actions:
-      create: "Create new review"
-      update: "Update review"
-      see: "See review"
+      create: "Thêm đánh giá mới"
+      update: "Cập nhật"
+      see: "Xem thêm"
 
   categories:
-    category: "Category"
+    category: "Thể loại"
     headers:
-      name: "Name"
+      name: "Thể Loại"
     actions:
-      create: "Create new category"
-      update: "Update category"
-      all: "Categories"
+      create: "Thêm thể loại"
+      update: "Cập nhật"
+      all: "Các thể loại"
 
   books:
-    book: "Book"
+    book: "Sách"
     headers:
-      title: "Title"
-      author: "Author"
-      description: "Description"
-      image: "Book image"
-      publish_date: "Publish"
-      number_of_pages: "Number pages"
+      title: "Tên Sách"
+      author: "Tác Giả"
+      description: "Mô Tả"
+      image: "Bìa Sách"
+      publish_date: "Ngày Xuất Bản"
+      number_of_pages: "Số Trang"
     actions:
-      create: "Create new book"
-      update: "Update book"
-    by: "by %{author}"
-    more: "(more)"
-    less: "(less)"
-    published: "Published %{date}"
-    reviews: "Reviews"
-    rated_it: "rated it"
-    likes: "%{number} Likes"
-    rate_book: "Rate this book"
-    write_review: "Write review"
-    my_book: "My Book"
-    rating: "rating"
+      create: "Thêm Sách Mới"
+      update: "Cập nhật"
+    by: "bởi %{author}"
+    more: "(Xem thêm)"
+    less: "(Ít hơn)"
+    published: "Ngày Xuất Bản %{date}"
+    reviews: "Các Đánh Giá"
+    rated_it: "đã xếp hạng"
+    likes: "%{number} Thích"
+    rate_book: "Xếp hạng sách"
+    write_review: "Viết đánh giá"
+    my_book: "Sách"
+    rating: "Xếp hạng"
 
   users:
     titles:
-      all: Users
+      all: Người dùng
     headers:
-      avatar: "User profile picture"
+      avatar: "Ảnh đại diện"
       follower: "Follower"
       following: "Following"
-      name: "Name"
+      name: "Tên"
       email: "Email"
     tabs:
-      settings: "Setting"
-      activities: "Activity"
-    edit: "Edit user"
-    noti_password: "leave blank if you don't want to change it"
+      settings: "Cài Đặt"
+      activities: "Hoạt Động"
+    edit: "Sửa"
+    noti_password: "để trống nếu bạn không muốn thay đổi"
 
   user_books:
     statuses:
-      want_to_read: "Want to read"
-      reading: "Currently Reading"
-      read: "Read"
+      want_to_read: "Muốn Đọc"
+      reading: "Đang Đọc"
+      read: "Đã Đọc"
 
   reports:
-    report: "Report"
+    report: "Báo Cáo Vi Phạm"
     titles:
-      all: "Reports"
+      all: "Báo Cáo"
     headers:
-      reason: "Reason"
-      user: "User"
-      review: "Review"
+      reason: "Lý Do"
+      user: "Người Dùng"
+      review: "Bài Đánh Giá"
 
   dashboards:
     statistics:
@@ -129,19 +129,19 @@ vi:
 
   flashs:
     messages:
-      created: "%{model_name} was created successfully!"
-      not_created: "%{model_name} couldn't be created!"
-      deleted: "%{model_name} was deleted successfully!"
-      not_deleted: "%{model_name} couldn't be deleted!"
-      not_updated: "%{model_name} couldn't be updated"
-      updated: "%{model_name} was updated successfully!"
-      permission_denied: "You are not authorized to access this page."
+      created: "%{model_name} đã tạo thành công"
+      not_created: "%{model_name} tạo không thành công"
+      deleted: "%{model_name} đã xoá thành công"
+      not_deleted: "%{model_name} không thể xoá"
+      not_updated: "%{model_name} không thể cập nhật"
+      updated: "%{model_name} cập nhật thành công"
+      permission_denied: "Bạn không được quyền truy cập trang này"
 
   notifications:
     titles:
-      all: "Notifications"
+      all: "Thông báo"
 
-  datetime:
+  time:
     formats:
       default: "%Y-%m-%d"
       long: "%B %d, %Y"
@@ -149,28 +149,28 @@ vi:
 
   home_pages:
     goodread_blog: "Goodreads Blog"
-    categories: "Categories"
-    follow_us: "Follow us"
+    categories: "Thể loại"
+    follow_us: "Theo dõi chúng tôi"
     fb: "Facebook"
     twitter: "Twitter"
     google: "Google"
     zalo: "Zalo"
-  author: "Author"
+  author: "Tác Giả"
 
   ransack:
-    search: "search"
+    search: "Tìm Kiếm"
     predicate: "predicate"
-    and: "and"
-    or: "or"
-    any: "any"
-    all: "all"
+    and: "và"
+    or: "hoặc"
+    any: "bất kì"
+    all: "tất cả"
     combinator: "combinator"
     attribute: "attribute"
-    value: "value"
-    condition: "condition"
-    sort: "sort"
-    asc: "ascending"
-    desc: "descending"
+    value: "Giá Trị"
+    condition: "Điều Kiện"
+    sort: "Sắp xếp"
+    asc: "Tăng dần"
+    desc: "Giảm dần"
     predicates:
       eq: "equals"
       eq_any: "equals any"

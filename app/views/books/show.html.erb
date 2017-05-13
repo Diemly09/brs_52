@@ -26,7 +26,7 @@
     <div class="book-rating">
       <%= render "book_rating", book: @book %>
     </div>
-    <div class="content">
+     <div class="content">
       <% if strip_tags(@book.description).length > 300 %>
         <div class="description-less">
           <%= truncate strip_tags(@book.description), length: 300 %>
