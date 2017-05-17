@@ -140,7 +140,7 @@
       <h3>The goodreads blog</h3>
       <p>4 Great New Book</p>
       <div class="col-sm-12 height-100">
-        <div class="col-sm-7">
+        <div class="col-sm-5">
           <div class="row">
             <% if @book_challenge.second.image %>
               <%= link_to book_path(@book_challenge.second) do %>
@@ -172,8 +172,8 @@
       <div class="col-sm-12 height-100">
         <div class="col-sm-5">
           <div class="row">
-            <% if @book_challenge.fourth.image %>
-              <%= link_to book_path(@book_challenge.fourth) do %>
+            <% if @book_challenge.fourth && @book_challenge.fourth.image %>
+              <%= link_to book_path(@book_challenge.first) do %>
                 <%= image_tag @book_challenge.first.image,
                   class: "img-responsive" %>
               <% end %>
@@ -186,8 +186,8 @@
         </div>
         <div class="col-sm-7">
           <div class="row">
-            <% if @book_challenge.fifth.image %>
-              <%= link_to book_path(@book_challenge.fifth) do %>
+            <% if @book_challenge.fifth && @book_challenge.fifth.image %>
+              <%= link_to book_path(@book_challenge.first) do %>
                 <%= image_tag @book_challenge.first.image,
                   class: "img-responsive" %>
               <% end %>
@@ -222,97 +222,3 @@
     </div>
   <% end %>
 </div>
-
-<% unless user_signed_in? %>
-  <div class="row td-css-box">
-    <div id="wrapper" class="td-home-box">
-      <section id="sidebar" class="col-sm-4 td-sidebar">
-        <section>
-          <div class="mini-posts">
-            <% @book_randoms.each do |book| %>
-              <article class="mini-post">
-                <header>
-                  <h3><a href="<%= new_user_session_path %>"
-                    title="<%= book.title %>"><%= book.title %></a></h3>
-                  <time class="published">
-                    <%= l book.created_at, format: :short %>
-                    <span>
-                      <%= t "author" %>:
-                      <%= book.author %>
-                    </span>
-                  </time>
-                  <div class="book-rating">
-                    <%= render "books/book_rating", book: book %>
-                  </div>
-                </header>
-                <a href="<%= new_user_session_path %>" class="image">
-                  <%= image_tag book.image %>
-                </a>
-              </article>
-            <% end %>
-          </div>
-        </section>
-
-        <section class="blurb">
-          <h2>About</h2>
-          <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod amet placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at phasellus sed ultricies.</p>
-          <ul class="actions">
-            <li><a href="<%= new_user_session_path %>" class="button">Learn More</a></li>
-          </ul>
-        </section>
-
-        <section id="footer">
-          <ul class="icons">
-            <li><a href="<%= new_user_session_path %>" class="fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="<%= new_user_session_path %>" class="fa-facebook"><span class="label">Facebook</span></a></li>
-            <li><a href="<%= new_user_session_path %>" class="fa-instagram"><span class="label">Instagram</span></a></li>
-            <li><a href="<%= new_user_session_path %>" class="fa-rss"><span class="label">RSS</span></a></li>
-            <li><a href="<%= new_user_session_path %>" class="fa-envelope"><span class="label">Email</span></a></li>
-          </ul>
-          <p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
-        </section>
-      </section>
-
-      <div class="td-home col-sm-8">
-        <% @review_randoms.each do |review| %>
-          <article class="post">
-            <header>
-              <div class="title col-sm-8">
-                <h2>
-                  <a href="<%= new_user_session_path %>" title="<%= review.book.title %>">
-                    <%= review.book.title %>
-                  </a>
-                </h2>
-                <p title="<%= review.book.description %>">
-                  <%= review.book.description %>
-                </p>
-              </div>
-              <div class="meta col-sm-4">
-                <time class="published" datetime="2015-11-01">
-                  <%= l review.created_at, format: :short %>
-                </time>
-                <a href="<%= new_user_session_path %>" class="author">
-                  <span><%= review.user.name %></span>
-                  <% if review.user.avatar %>
-                    <%= image_tag review.user.avatar %>
-                  <% else %>
-                    <%= image_tag "images.jpg" %>
-                  <% end %>
-                </a>
-              </div>
-              <div class="clearfix"></div>
-            </header>
-            <a href="<%= new_user_session_path %>" class="image featured td-review-book-image img-responsive">
-              <%= image_tag review.book.image %>
-            </a>
-            <p>
-              <%= review.content %>
-            </p>
-          </article>
-        <% end %>
-      </div>
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-<% end %>
