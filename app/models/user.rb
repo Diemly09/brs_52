@@ -21,6 +21,7 @@ class User < ApplicationRecord
   has_many :notifications, foreign_key: :recipient_id
   has_many :reports, dependent: :destroy
   has_many :ratings, dependent: :destroy
+  has_many :requests, dependent: :destroy
 
   mount_uploader :avatar, ImageUploader
 

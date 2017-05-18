@@ -1,0 +1,20 @@
+<tr class="request-<%= request.id %>">
+  <td><%= index %></td>
+  <td><%= link_to request.user.name, request.user %></td>
+  <td><%= request.title %></td>
+  <td><%= request.author %></td>
+  <td><%= l request.publish_date, format: :default %></td>
+  <td>
+    <div class="<%= request_class request %>">
+      <%= t "requests.statuses.#{request.status}" %>
+    </div>
+  </td>
+  <th>
+    <%= link_to t("buttons.edit"), edit_request_path(request) %>
+    <%= link_to request_path(request),
+      data: {method: :delete, confirm: t("form.confirmation")},
+      title: t("buttons.delete") do %>
+      <i class="fa fa-times"></i>
+    <% end %>
+  </th>
+</tr>

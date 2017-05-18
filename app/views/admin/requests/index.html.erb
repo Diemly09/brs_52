@@ -1,0 +1,22 @@
+<div class="requests">
+  <div class="row">
+    <table class="table table-border">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th><%= t "requests.headers.user" %></th>
+          <th><%= t "requests.headers.title" %></th>
+          <th><%= t "requests.headers.author" %></th>
+          <th><%= t "requests.headers.publish_date" %></th>
+          <th><%= t "requests.headers.status" %></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody class="request-body">
+        <% @requests.each_with_index do |request, index| %>
+          <%= render "request", request: request, index: index + 1 %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

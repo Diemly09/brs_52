@@ -1,0 +1,22 @@
+<tr class="request-<%= request.id %>">
+  <td><%= index %></td>
+  <td><%= link_to request.user.name, request.user %></td>
+  <td><%= request.title %></td>
+  <td><%= request.author %></td>
+  <td><%= l request.publish_date, format: :default %></td>
+  <td>
+    <div class="<%= request_class request %>">
+      <%= t "requests.statuses.#{request.status}" %>
+    </div>
+  </td>
+  <th>
+    <% if request.in_progress? %>
+      <%= link_to t("buttons.accept"),
+        admin_request_path(request, status: "accepted"),
+        method: :patch, class: "btn btn-success" %>
+      <%= link_to t("buttons.reject"),
+        admin_request_path(request, status: "rejected"),
+        method: :patch, class: "btn btn-danger" %>
+    <% end %>
+  </th>
+</tr>

@@ -24,6 +24,7 @@ Rails.application.routes.draw do
     resources :notifications, only: [:index, :update]
     resources :categories, only: :show
     resources :favorite_books, only: [:create, :destroy]
+    resources :requests, except: :show
 
     namespace :update_notification do
       resource :users, only: :update
@@ -37,6 +38,7 @@ Rails.application.routes.draw do
       resources :dashboards, only: :index
       resources :reports, only: :index
       resources :users, only: [:index, :destroy]
+      resources :requests, except: :show
     end
   end
 end
