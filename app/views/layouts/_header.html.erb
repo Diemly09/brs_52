@@ -20,6 +20,7 @@
             <li><%= link_to t("users.user"), admin_users_path %></li>
             <li><%= link_to t("reports.report"), admin_reports_path %></li>
           <% else %>
+            <li><%= link_to t("requests.request"), requests_path %></li>
             <li><%= link_to t("books.my_book"), books_path %></li>
           <% end %>
           <li class="dropdown notifications-menu"

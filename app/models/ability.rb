@@ -28,6 +28,10 @@ class Ability
       can :destroy, FavoriteBook, FavoriteBook do |favorite_book|
         favorite_book.user_id == user.id
       end
+      can [:index, :new, :create], Request
+      can [:edit, :update, :destroy], Request, Request do |request|
+        request.user_id == user.id
+      end
     end
   end
 end

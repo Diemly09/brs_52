@@ -1,0 +1,21 @@
+<%= form_for @request do |f| %>
+  <%= render "shared/errors_messages", object: f.object %>
+
+  <div class="form-group">
+    <%= f.label t("requests.headers.title") %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label t("requests.headers.author") %>
+    <%= f.text_field :author, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label t("requests.headers.publish_date") %>
+    <%= f.date_field :publish_date, class: "form-control" %>
+  </div>
+
+  <%= f.submit t("buttons.save"), class: "btn btn-success pull-right" %>
+<% end %>
+<%= link_to t("buttons.cancel"), requests_path, class: "btn btn-default" %>

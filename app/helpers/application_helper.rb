@@ -62,6 +62,10 @@ module ApplicationHelper
       "#{notification.user.email} #{notification.action} your review!"
     when "reviewed"
       "#{notification.user.email} #{notification.action} #{notification.notifiable.title}"
+    when "requested"
+      "#{notification.user.email} #{notification.action} a book with title #{notification.notifiable.title}"
+    when "accepted" || "rejected"
+      "#{notification.user.email} #{notification.action} your request!"
     end
   end
 
@@ -85,5 +89,16 @@ module ApplicationHelper
 
   def image_book book
     book.image ? book.image : "book.jpg"
+  end
+
+  def request_class request
+    case request.status
+    when "in_progress"
+      "label label-info"
+    when "accepted"
+      "label label-success"
+    when "rejected"
+      "label label-default"
+    end
   end
 end

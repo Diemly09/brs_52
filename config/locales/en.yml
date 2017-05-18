@@ -44,6 +44,8 @@ en:
     view_all: "View all"
     add_condition: "Add condition"
     search: "Search"
+    accept: "Accept"
+    reject: "Reject"
 
   form:
     confirmation: "Are you sure?"
@@ -152,6 +154,22 @@ en:
       default: "%Y-%m-%d"
       long: "%B %d, %Y"
       short: "%b %d"
+
+  requests:
+    request: "Request"
+    headers:
+      user: "User"
+      title: "Book title"
+      author: "Author"
+      publish_date: "Public"
+      status: "Status"
+    statuses:
+      in_progress: "Processing"
+      accepted: "Accepted"
+      rejected: "Rejected"
+    actions:
+      edit: "Edit request"
+      new: "New request"
 
   home_pages:
     goodread_blog: "Goodreads Blog"
