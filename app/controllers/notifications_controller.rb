@@ -31,9 +31,9 @@ class NotificationsController < ApplicationController
     when "reviewed"
       redirect_to @notification.notifiable
     when "requested"
-      redirect_to admin_notifications_path
+      redirect_to admin_requests_path
     when "accepted" || "rejected"
-      redirect_to notifications_path
+      redirect_to requests_path
     end
   end
 end
