@@ -228,6 +228,36 @@ footer {
 }
 .td-fix-devise {
   margin-top: 20px !important;
+  background: rgba(255, 255, 255, 0.2);
+}
+.book-bg{
+    background: url(http://blog.hdwallsource.com/wp-content/uploads/2016/02/pretty-book-wallpaper-41790-42772-hd-wallpapers.jpg) 0px 0px;
+    min-height: 502px;
+    background-size: cover;
+}
+.book-bg .btn-primary {
+    padding: 5px 15px;
+    display: block;
+    margin: auto;
+}
+.header {
+    height: 50px;
+}
+.header a {
+    float: left;
+}
+.btn-primary {
+    margin-bottom: 12px;
+}
+body {
+    padding-top: 50px;
+}
+.logo{
+    margin-top: 10px;
+    display: block;
+}
+.panel-heading {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.45);
 }
 
 .td-css-box {
@@ -332,7 +362,7 @@ footer {
 .height-100 {
   img {
     height: 100px !important;
-    margin: 0 !important;
+    margin: 5px !important;
     padding: 0 5px;
   }
 }
@@ -487,4 +517,6 @@ footer {
     text-overflow: ellipsis;
     padding: 10px;
   }
+.content {
+    min-height: 20px;
 }

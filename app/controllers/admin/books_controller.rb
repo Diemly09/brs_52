@@ -44,7 +44,7 @@ class Admin::BooksController < ApplicationController
     else
       flash[:alert] = flash_message "not_deleted"
     end
-    redirect_to categories_path
+    redirect_to admin_books_path
   end
 
   private

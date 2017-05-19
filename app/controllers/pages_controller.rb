@@ -15,11 +15,10 @@ class PagesController < ApplicationController
           end
         @reviews = Review.order_by_created_at.page(params[:page]).per_page 5
         @categories = Category.all
+        render template: "pages/#{params[:name_page]}"
       else
-        @review_randoms = Review.where(id: Review.new.random_ids(3, Review.name))
-        @book_randoms = Book.where(id: Book.new.random_ids(5, Book.name))
+        redirect_to new_user_session_path
       end
-      render template: "pages/#{params[:name_page]}"
     else
       render file: "public/404.html", status: :not_found
     end
