@@ -240,9 +240,6 @@ footer {
     display: block;
     margin: auto;
 }
-.header {
-    height: 50px;
-}
 .header a {
     float: left;
 }
@@ -517,6 +514,16 @@ body {
     text-overflow: ellipsis;
     padding: 10px;
   }
+}
+
 .content {
-    min-height: 20px;
+  min-height: 20px;
+}
+
+.td-header-dropdown {
+  li {
+    a {
+      width: 100%;
+    }
+  }
 }

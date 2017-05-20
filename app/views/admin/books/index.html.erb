@@ -1,26 +1,10 @@
-<%= link_to t("buttons.new"), new_admin_book_path, class: "btn btn-info" %>
-<%= search_form_for @search do |f| %>
+<%= search_form_for @search, url: admin_books_path do |f| %>
   <%= f.condition_fields do |condition| %>
     <%= render "condition_fields", f: condition %>
   <% end %>
   <br>
-  <p><%= link_to_add_fields t("buttons.add_condition"), f, :condition %></p>
-  <div class="fields">
-    <%= t "sort" %>
-    <div class="column">
-      <%= f.sort_fields do |sort_field| %>
-        <%= sort_field.sort_select Hash.new,
-          class: "large-5 small-4 columns mrs radius" %>
-      <% end %>
-    </div>
-  </div>
-  <br>
-  <div class="actions">
-    <%= button_tag type: "submit", class: "btn btn-success" do %>
-      <i class="glyphicon glyphicon-search"></i><%= t "buttons.search" %>
-    <% end %>
-  </div>
 <% end %>
+
 <br>
 <table id="book" class="table table-hover table-bordered text-center">
   <tbody>

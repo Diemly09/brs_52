@@ -1,18 +1,23 @@
-<div class="field">
-  <div class="large-3 small-3 columns">
+<div class="field clearfix">
+  <div class="col-sm-2 columns">
     <%= f.attribute_fields do |a| %>
       <%= a.attribute_select associations: :category, class: "radius" %>
     <% end %>
   </div>
-  <div class="large-4 small-4 columns">
+  <div class="col-sm-2 columnsk none">
     <%= f.predicate_select Hash.new, class: "radius" %>
   </div>
-  <div class="large-4 small-4 columns">
+  <div class="col-sm-8 columns">
     <%= f.value_fields do |v| %>
-      <%= v.text_field :value, class: "radius" %>
+      <%= v.text_field :value, class: "radius form-control",
+        placeholder: "Search" %>
     <% end %>
   </div>
-  <div class="large-1 small-1 columns">
-    <%= link_to "", "#", class: "remove_fields glyphicon glyphicon-remove" %>
+
+  <div class="actions inline-block">
+    <%= button_tag type: "submit", class: "btn btn-success" do %>
+      <i class="glyphicon glyphicon-search"></i><%= t "buttons.search" %>
+    <% end %>
+    <%= link_to t("buttons.new"), new_admin_book_path, class: "btn btn-info" %>
   </div>
 </div>

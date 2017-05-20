@@ -142,13 +142,13 @@
       <div class="col-sm-12 height-100">
         <div class="col-sm-5">
           <div class="row">
-            <% if @book_challenge.second.image %>
+            <% if @book_challenge.second && @book_challenge.second.image %>
               <%= link_to book_path(@book_challenge.second) do %>
-                <%= image_tag @book_challenge.first.image,
+                <%= image_tag @book_challenge.second.image,
                   class: "img-responsive" %>
               <% end %>
             <% else %>
-              <%= link_to book_path(@book_challenge.first) do %>
+              <%= link_to book_path(@book_challenge.second) do %>
                 <%= image_tag "book.jpg", class: "img-responsive" %>
               <% end %>
             <% end %>
@@ -156,13 +156,13 @@
         </div>
         <div class="col-sm-5">
           <div class="row">
-            <% if @book_challenge.third.image %>
+            <% if @book_challenge.third && @book_challenge.third.image %>
               <%= link_to book_path(@book_challenge.third) do %>
-                <%= image_tag @book_challenge.first.image,
+                <%= image_tag @book_challenge.third.image,
                   class: "img-responsive" %>
               <% end %>
             <% else %>
-              <%= link_to book_path(@book_challenge.first) do %>
+              <%= link_to book_path(@book_challenge.third) do %>
                 <%= image_tag "book.jpg", class: "img-responsive" %>
               <% end %>
             <% end %>
@@ -173,12 +173,12 @@
         <div class="col-sm-5">
           <div class="row">
             <% if @book_challenge.fourth && @book_challenge.fourth.image %>
-              <%= link_to book_path(@book_challenge.first) do %>
-                <%= image_tag @book_challenge.first.image,
+              <%= link_to book_path(@book_challenge.fourth) do %>
+                <%= image_tag @book_challenge.fourth.image,
                   class: "img-responsive" %>
               <% end %>
             <% else %>
-              <%= link_to book_path(@book_challenge.first) do %>
+              <%= link_to book_path(@book_challenge.fourth) do %>
                 <%= image_tag "book.jpg", class: "img-responsive" %>
               <% end %>
             <% end %>
@@ -187,12 +187,12 @@
         <div class="col-sm-7">
           <div class="row">
             <% if @book_challenge.fifth && @book_challenge.fifth.image %>
-              <%= link_to book_path(@book_challenge.first) do %>
-                <%= image_tag @book_challenge.first.image,
+              <%= link_to book_path(@book_challenge.fifth) do %>
+                <%= image_tag @book_challenge.fifth.image,
                   class: "img-responsive" %>
               <% end %>
             <% else %>
-              <%= link_to book_path(@book_challenge.first) do %>
+              <%= link_to book_path(@book_challenge.fifth) do %>
                 <%= image_tag "book.jpg", class: "img-responsive" %>
               <% end %>
             <% end %>
