@@ -5,14 +5,16 @@
     </a>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li>
-          <div>
-            <%= search_form_for @search, url: books_path, method: :get do |f| %>
-              <%= f.search_field :author_or_title_or_category_name_cont,
-                class: "form-control", placeholder: t("search") %>
-            <% end %>
-          </div>
-        </li>
+        <% if user_signed_in? %>
+          <li>
+            <div>
+              <%= search_form_for @search, url: books_path, method: :get do |f| %>
+                <%= f.search_field :author_or_title_or_category_name_cont,
+                  class: "form-control", placeholder: t("search") %>
+              <% end %>
+            </div>
+          </li>
+        <% end %>
         <li>
           <% Settings.languages.each do |_, val| %>
             <div class="col-xs-1 text-center full-height" style="margin-right: 10px;">
@@ -29,6 +31,7 @@
             <li><%= link_to t("books.book"), admin_books_path %></li>
             <li><%= link_to t("users.user"), admin_users_path %></li>
             <li><%= link_to t("reports.report"), admin_reports_path %></li>
+            <li><%= link_to t("requests.request"), admin_requests_path %></li>
           <% else %>
             <li><%= link_to t("requests.request"), requests_path %></li>
             <li><%= link_to t("books.my_book"), books_path %></li>

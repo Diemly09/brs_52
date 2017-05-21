@@ -69,6 +69,7 @@ vi:
       create: "Create new category"
       update: "Update category"
       all: "Categories"
+      book: "sách"
 
   books:
     book: "Book"
@@ -127,6 +128,22 @@ vi:
   dashboards:
     statistics:
       info: "Statistic"
+
+  requests:
+    request: "Yêu cầu"
+    headers:
+      user: "User"
+      title: "Book title"
+      author: "Author"
+      publish_date: "Public"
+      status: "Status"
+    statuses:
+      in_progress: "Processing"
+      accepted: "Accepted"
+      rejected: "Rejected"
+    actions:
+      edit: "Edit request"
+      new: "New request"
 
   flashs:
     messages:
