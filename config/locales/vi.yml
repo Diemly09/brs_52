@@ -27,6 +27,7 @@ vi:
   framgia: "Framgia VietNam"
   posted_ago: "Posted %{time} ago"
   sort: "Sort"
+  search: "Tìm kiếm"
 
   buttons:
     new: "New"

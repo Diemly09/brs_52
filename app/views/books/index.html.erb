@@ -1,9 +1,12 @@
 <div class="td-book-index">
-  <%= search_form_for @search do |f| %>
-    <%= f.condition_fields do |condition| %>
-      <%= render "condition_fields", f: condition %>
-    <% end %>
-  <% end %>
+  <div class="row">
+    <div class="col-md-offset-1 col-md-10">
+      <%= search_form_for @search do |f| %>
+        <%= f.search_field :author_or_title_or_category_name_cont,
+          class: "form-control", placeholder: t("search") %>
+      <% end %>
+    </div>
+  </div>
   <div class="clear"></div>
   <div id="main">
     <div class="inner">
