@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   protect_from_forgery with: :exception
-  before_action :authenticate_user!, :set_locale
+  before_action :authenticate_user!, :set_locale, :load_search
 
   include ApplicationHelper
 
@@ -25,5 +25,9 @@ class ApplicationController < ActionController::Base
 
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
+  end
+
+  def load_search
+    @search = Book.search params[:q]
   end
 end

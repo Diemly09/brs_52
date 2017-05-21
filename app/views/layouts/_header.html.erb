@@ -6,6 +6,14 @@
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li>
+          <div>
+            <%= search_form_for @search, url: books_path, method: :get do |f| %>
+              <%= f.search_field :author_or_title_or_category_name_cont,
+                class: "form-control", placeholder: t("search") %>
+            <% end %>
+          </div>
+        </li>
+        <li>
           <% Settings.languages.each do |_, val| %>
             <div class="col-xs-6 text-center full-height">
               <%= link_to params.except!(*["q", "month"]).merge(locale: val),
