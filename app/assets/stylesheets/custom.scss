@@ -89,7 +89,7 @@ p {
 
 footer {
   padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
+  border-top: 1px solid rgba(234, 234, 234, 0.4);
   color: $gray-light;
 
   a {
@@ -217,6 +217,11 @@ footer {
   li {
     border: none;
     height: 60px;
+    //float: left;
+  }
+  ul li ul li{
+    //display:block;
+    //width: 160px;
   }
 
   nav {
@@ -232,17 +237,39 @@ footer {
 }
 .book-bg{
     background: url(http://blog.hdwallsource.com/wp-content/uploads/2016/02/pretty-book-wallpaper-41790-42772-hd-wallpapers.jpg) 0px 0px;
-    min-height: 502px;
     background-size: cover;
+    min-height: calc(100vh - 50px);
+    height:calc(100vh - 50px);
+    margin-bottom: -40px;
+    z-index: 999999;
+    padding-top: 15px;
 }
 .book-bg .btn-primary {
     padding: 5px 15px;
     display: block;
     margin: auto;
 }
+.book-bg a {
+    color: #ffffff;
+    text-decoration: none;
+    text-shadow: 0px 0px 4px #000;
+}
+.book-bg a:hover {
+    color: #000;
+    text-decoration: none;
+    text-shadow: 0px 0px 4px #fff;
+}
 .header a {
     float: left;
+    width: 100%;
 }
+.header .logo {
+    width: auto;
+}
+.dropdown-menu {
+
+    //min-width: 160px;
+  }
 .btn-primary {
     margin-bottom: 12px;
 }
@@ -312,6 +339,66 @@ body {
   .book-status {
     margin-top: 30px;
   }
+}
+.td-right-nav {
+    position: fixed;
+    right: 0;
+}
+.navcat{
+  float: none;
+  clear: both;
+  margin: 10% auto;
+  background: #eee;
+}
+
+.navcat ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.navcat li{
+  float: none;
+  width: 100%;
+}
+
+.navcat li a{
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border-left: 5px solid;
+    position: relative;
+    z-index: 2;
+    text-decoration: none;
+    color: #444;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-bottom: solid 1px #cecece;
+}
+
+.navcat li a:hover{ border-bottom: 0px; color: #fff;}
+.navcat li:nth-child(n) a{ border-left: 10px solid #3498db; }
+.navcat li:nth-child(2n) a{ border-left: 10px solid #27ae60; }
+
+.navcat li a:after {
+  content: "";
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 0px;
+  position: absolute;
+  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  z-index: -1;
+}
+
+.navcat li a:hover:after{ width: 100%; }
+.navcat li:nth-child(n) a:after{ background: #3498db; }
+.navcat li:nth-child(2n) a:after{ background: #27ae60; }
+
+.book .content {
+    min-height: 200px;
 }
 
 .float-right {
@@ -406,8 +493,8 @@ body {
     display: block;
 
     img {
-      width: 35px;
-      height: 25px;
+      width: 28px;
+    height: auto;
     }
   }
 }
@@ -526,4 +613,25 @@ body {
       width: 100%;
     }
   }
+}
+.row2 {
+    min-height: calc(100vh - 50px);
+    height: calc(100vh - 50px);
+    margin-bottom: -40px;
+  }
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.book-bg .row {
+    min-height: auto;
+    height: auto;
+    margin-bottom: 0px;
+}
+.td-img-book-popular img {
+    height: auto;
+}
+.new-request-button{
+    padding: 5px 15px;
+    margin: 20px 30px -35px 0px;
 }

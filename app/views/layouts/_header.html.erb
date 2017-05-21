@@ -15,7 +15,7 @@
         </li>
         <li>
           <% Settings.languages.each do |_, val| %>
-            <div class="col-xs-6 text-center full-height">
+            <div class="col-xs-1 text-center full-height" style="margin-right: 10px;">
               <%= link_to params.except!(*["q", "month"]).merge(locale: val),
                 data: {no_turbolink: true} do %>
                 <%= image_tag "#{val}.png", size: Settings.flag_size %>

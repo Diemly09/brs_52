@@ -43,15 +43,19 @@
           Want to read?
           <%= link_to "View all book", books_path %>
         </h3>
-        <ul class="home-list-category">
+        <div class="navcat">
+        <ul class="home-list-category-2">
           <% @categories.each do |category| %>
-            <%= link_to category_path(category) do %>
-              <li class="text-center">
+             <li class="text-center">
+              <%= link_to category_path(category) do %>
+
                 <%= category.name %>
-              </li>
-            <% end %>
+
+              <% end %>
+            </li>
           <% end %>
         </ul>
+        </div>
         <div class="td-view-all-book"></div>
       </div>
     </div>
