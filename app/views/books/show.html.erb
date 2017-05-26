@@ -18,8 +18,7 @@
   </div>
   <div class="col-md-9">
     <p class="title"><%= @book.title %></p>
-    <i><%= t "books.by", author:  @book.author %>
-    </i>
+    <i>bởi <%= @book.author %></i>
     <p class="favorite-book-<%= @book.id %> favorite-icon">
       <%= render "favorite_books/favorite_book", book: @book %>
     </p>

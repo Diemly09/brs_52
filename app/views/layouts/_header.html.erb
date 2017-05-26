@@ -1,61 +1,66 @@
 <header class="navbar navbar-fixed-top navbar-inverse header">
   <div class="container">
-    <a class="logo" href="<%= root_path %>" >
-      <img src="http://sv1.upsieutoc.com/2017/05/18/logo99c6f.png">
-    </a>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <% if user_signed_in? %>
-          <li>
-            <div>
-              <%= search_form_for @search, url: books_path, method: :get do |f| %>
-                <%= f.search_field :author_or_title_or_category_name_cont,
-                  class: "form-control", placeholder: t("search") %>
-              <% end %>
-            </div>
-          </li>
-        <% end %>
-        <li>
-          <% Settings.languages.each do |_, val| %>
-            <div class="col-xs-1 text-center full-height" style="margin-right: 10px;">
-              <%= link_to params.except!(*["q", "month"]).merge(locale: val),
-                data: {no_turbolink: true} do %>
-                <%= image_tag "#{val}.png", size: Settings.flag_size %>
-              <% end %>
-            </div>
+    <div class="col-sm-3 logo-header">
+      <a class="logo" href="<%= root_path %>" >
+        <img src="http://sv1.upsieutoc.com/2017/05/18/logo99c6f.png">
+      </a>
+    </div>
+    <div class=" col-sm-3 search-header">
+      <% if user_signed_in? %>
+              <div>
+                <%= search_form_for @search, url: books_path, method: :get do |f| %>
+                  <%= f.search_field :author_or_title_or_category_name_cont,
+                    class: "form-control", placeholder: t("search") %>
+                <% end %>
+              </div>
           <% end %>
-        </li>
-        <% if user_signed_in? %>
-          <% if current_user.is_admin? %>
-            <li><%= link_to t("categories.category"), admin_categories_path %></li>
-            <li><%= link_to t("books.book"), admin_books_path %></li>
-            <li><%= link_to t("users.user"), admin_users_path %></li>
-            <li><%= link_to t("reports.report"), admin_reports_path %></li>
-            <li><%= link_to t("requests.request"), admin_requests_path %></li>
+    </div>
+     <div class=" col-sm-6 right-header">
+      <nav>
+        <ul class="nav navbar-nav navbar-right">
+          <!-- <li>
+            <%# Settings.languages.each do |_, val| %>
+              <div class=" text-center full-height" style="margin-left: 10px;float: left;">
+                <%#= link_to params.except!(*["q", "month"]).merge(locale: val),
+                  data: {no_turbolink: true} do %>
+                  <%#= image_tag "#{val}.png", size: Settings.flag_size %>
+                <%# end %>
+              </div>
+            <%# end %>
+          </li> -->
+          <% if user_signed_in? %>
+            <% if current_user.is_admin? %>
+              <li><%= link_to t("categories.category"), admin_categories_path %></li>
+              <li><%= link_to t("books.book"), admin_books_path %></li>
+              <li><%= link_to t("users.user"), admin_users_path %></li>
+              <li><%= link_to t("reports.report"), admin_reports_path %></li>
+              <li><%= link_to t("requests.request"), admin_requests_path %></li>
+            <% else %>
+              <li><%= link_to t("requests.request"), requests_path %></li>
+              <li><%= link_to t("books.my_book"), books_path %></li>
+            <% end %>
+            <li class="dropdown notifications-menu"
+              id="notifications-<%= current_user.id %>">
+              <%= render "layouts/notifications", user: current_user %>
+              <div class="clearfix"></div>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <%= "Tài khoản" %><b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu td-header-dropdown">
+                <li><%= link_to "Trang cá nhân", current_user %></li>
+                <li class="divider"></li>
+                <li><%= link_to "Đăng xuất", destroy_user_session_path, method: :delete %></li>
+              </ul>
+            </li>
           <% else %>
-            <li><%= link_to t("requests.request"), requests_path %></li>
-            <li><%= link_to t("books.my_book"), books_path %></li>
+            <% if user_signed_in? %>
+              <li><%= link_to t("sign_in"), new_session_path(:user) %></li>
+            <% end %>
           <% end %>
-          <li class="dropdown notifications-menu"
-            id="notifications-<%= current_user.id %>">
-            <%= render "layouts/notifications", user: current_user %>
-            <div class="clearfix"></div>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <%= t "account" %><b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu td-header-dropdown">
-              <li><%= link_to t("profile"), current_user %></li>
-              <li><%= link_to t("settings"), edit_user_registration_path %></li>
-              <li class="divider"></li>
-              <li><%= link_to t("logout"), destroy_user_session_path, method: :delete %></li>
-            </ul>
-          </li>
-        <% else %>
-          <li><%= link_to t("sign_in"), new_session_path(:user) %></li>
-        <% end %>
-      </ul>
-    </nav>
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>

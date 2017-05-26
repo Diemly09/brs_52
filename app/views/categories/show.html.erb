@@ -1,5 +1,5 @@
 <div class="td-categories-show row" data-id="<%= @category.id %>">
-  <div class="col-sm-3">
+  <div class="col-sm-3"  style="width: 20%">
     <div class="row">
       <%#= image_tag "book_award.png", class: "image-book-award" %>
       <div class="clearfix"></div>
@@ -9,7 +9,7 @@
             <li class="category-<%= category.id %>">
               <p><%= category.name %></p>
               <p class="view-result">
-                View result <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                Chi Tiết <i class="fa fa-arrow-right" aria-hidden="true"></i>
               </p>
             </li>
           <% end %>
@@ -17,10 +17,10 @@
       </ul>
     </div>
   </div>
-  <div class="col-sm-7 td-show-category-content">
+  <div class="col-sm-9 td-show-category-content" style="width: 80%">
     <% if @best_book %>
       <div class="td-best-book">
-        <h1 class="text-left">Best <%= @category.name %>'s book</h1>
+        <h1 class="text-left">Bình chọn nhiều nhất</h1>
         <div class="gcaDivider">
           <div class="gcaDivider__centerpiece"></div>
         </div>

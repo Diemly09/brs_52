@@ -22,108 +22,111 @@
 vi:
   welcome: "Welcome to the"
   title_page: "Book Review System"
-  home: "Home"
+  home: "Trang Chủ"
   slogan: "Meet your next favourite book"
-  framgia: "Framgia VietNam"
-  posted_ago: "Posted %{time} ago"
-  sort: "Sort"
+  framgia: "BookReview"
+  posted_ago: "Đăng %{time} trước"
+  sort: "Sắp xếp"
   search: "Tìm kiếm"
 
   buttons:
-    new: "New"
-    edit: "Edit"
-    delete: "Delete"
-    reply: "Reply"
-    comment: "Comment"
-    commenting: "Commenting.."
-    save: "Save"
-    saving: "Saving"
-    follow: "Follow"
-    unfollow: "Unfollow"
-    report: "Report"
-    cancel: "Cancel"
-    view_all: "View all"
+    new: "Thêm mới"
+    edit: "Sửa"
+    delete: "Xoá"
+    reply: "Trả lời"
+    comment: "Bình luận"
+    commenting: "Đang bình luận..."
+    save: "Lưu"
+    saving: "Đang lưu"
+    follow: "Theo dõi"
+    unfollow: "Bỏ theo dõi"
+    report: "Báo cáo vi phạm"
+    cancel: "Huỷ"
+    view_all: "Xem tất cả"
     add_condition: "Add condition"
-    search: "Search"
+    search: "Tìm kiếm"
 
   form:
-    confirmation: "Are you sure?"
-    error: "error"
+    confirmation: "Bạn có chắc không?"
+    error: "Lỗi"
     inform_error: "The form contain %{error}"
 
   comments:
     header:
-      content: "Enter comment ..."
+      content: "Nhâp bình luận..."
 
   reviews:
     actions:
-      create: "Create new review"
-      update: "Update review"
-      see: "See review"
+      create: "Viết đánh giá mới"
+      update: "Sửa đánh giá"
+      see: "Xem đánh giá"
 
   categories:
-    category: "Category"
+    category: "Thể loại"
     headers:
-      name: "Name"
+      name: "Tên"
     actions:
-      create: "Create new category"
-      update: "Update category"
-      all: "Categories"
+      create: "Thêm thể loại"
+      update: "Cập nhật"
+      all: "Danh sách"
       book: "sách"
+      all_book: "Tất cả sách"
+      destroy: "Xoá"
 
   books:
-    book: "Book"
+    book: "Sách"
     headers:
-      title: "Title"
-      author: "Author"
-      description: "Description"
-      image: "Book image"
-      publish_date: "Publish"
-      number_of_pages: "Number pages"
+      title: "Tên"
+      author: "Tác Giả"
+      description: "Mô Tả"
+      image: "Ảnh Bìa"
+      publish_date: "Ngày Xuất Bản"
+      number_of_pages: "Số Trang"
     actions:
-      create: "Create new book"
-      update: "Update book"
-    by: "by %{author}"
-    more: "(more)"
-    less: "(less)"
-    published: "Published %{date}"
-    reviews: "Reviews"
-    rated_it: "rated it"
-    likes: "%{number} Likes"
-    rate_book: "Rate this book"
-    write_review: "Write review"
-    my_book: "My Book"
-    rating: "rating"
+      create: "Thêm sách mới"
+      update: "Cập Nhật"
+    by: "bởi %{author}"
+    more: "(xem thêm)"
+    less: "(thu gọn)"
+    published: "Ngày xuất bản %{date}"
+    reviews: "Bài Đánh Giá"
+    rated_it: "đã bình chọn"
+    likes: "%{number} Thích"
+    rate_book: "Bình chọn"
+    write_review: "Viết Đánh Giá"
+    my_book: "Sách"
+    rating: "bình chọn"
+    by_author: "bởi"
 
   users:
     titles:
-      all: Users
+      all: Người dùng
     headers:
-      avatar: "User profile picture"
-      follower: "Follower"
-      following: "Following"
-      name: "Name"
+      avatar: "Ảnh Đại Diện"
+      follower: "Người Theo Dõi"
+      following: "Theo Dõi"
+      name: "Tên"
       email: "Email"
     tabs:
-      settings: "Setting"
-      activities: "Activity"
-    edit: "Edit user"
-    noti_password: "leave blank if you don't want to change it"
+      settings: "Cài Đặt"
+      activities: "Hoạt Động"
+    edit: "Sửa thông tin"
+    noti_password: "Để trống nếu bạn không muốn thay đổi"
 
   user_books:
     statuses:
-      want_to_read: "Want to read"
-      reading: "Currently Reading"
-      read: "Read"
+      want_to_read: "Muốn đọc"
+      reading: "Đang đọc"
+      read: "Đã đọc"
 
   reports:
-    report: "Report"
+    report: "Báo cáo"
     titles:
-      all: "Reports"
+      all: "Báo cáo vi phạm"
     headers:
-      reason: "Reason"
-      user: "User"
-      review: "Review"
+      reason: "Lý Do"
+      user: "Người dùng"
+      review: "Bài đánh giá"
 
   dashboards:
     statistics:
@@ -132,32 +135,32 @@ vi:
   requests:
     request: "Yêu cầu"
     headers:
-      user: "User"
-      title: "Book title"
-      author: "Author"
-      publish_date: "Public"
-      status: "Status"
+      user: "Người dùng"
+      title: "Tên Sách"
+      author: "Tác Giả"
+      publish_date: "Ngày Xuất Bản"
+      status: "Trạng Thái"
     statuses:
-      in_progress: "Processing"
-      accepted: "Accepted"
-      rejected: "Rejected"
+      in_progress: "Chờ phê duyệt"
+      accepted: "Chấp nhận"
+      rejected: "Từ chối"
     actions:
-      edit: "Edit request"
-      new: "New request"
+      edit: "Sửa yêu cầu"
+      new: "Yêu cầu mới"
 
   flashs:
     messages:
-      created: "%{model_name} was created successfully!"
-      not_created: "%{model_name} couldn't be created!"
-      deleted: "%{model_name} was deleted successfully!"
-      not_deleted: "%{model_name} couldn't be deleted!"
-      not_updated: "%{model_name} couldn't be updated"
-      updated: "%{model_name} was updated successfully!"
-      permission_denied: "You are not authorized to access this page."
+      created: "%{model_name} được tạo thành công!"
+      not_created: "%{model_name} không thể tạo!"
+      deleted: "%{model_name} được xoá thành công!"
+      not_deleted: "%{model_name} không thể xoá!"
+      not_updated: "%{model_name} không thể cập nhật!"
+      updated: "%{model_name} cập nhật thành công!"
+      permission_denied: "Bạn không có quyền truy cập trang này!"
 
   notifications:
     titles:
-      all: "Notifications"
+      all: "Thông Báo"
 
   activerecord:
     errors:

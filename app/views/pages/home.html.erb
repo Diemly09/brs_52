@@ -5,15 +5,14 @@
       <div class="td-right-nav-title">
         <h4>
           <%= image_tag "book.svg" %>
-          What are you reading?
+          Hôm nay bạn đọc gì?
         </h4>
       </div>
       <hr>
       <div class="td-right-nav-content">
         <h3>
-          2017 MOST POPULAR
+          Bình chọn nhiều nhất
         </h3>
-        <p>The most anticipated book!</p>
         <div class="col-sm-5">
           <div class="row td-img-book-popular">
             <% if @book_challenge.first.image %>
@@ -40,8 +39,8 @@
       <hr>
       <div class="td-right-nav-footer">
         <h3>
-          Want to read?
-          <%= link_to "View all book", books_path %>
+          Thể loại yêu thích
+          <%= link_to "Tất cả sách", books_path %>
         </h3>
         <div class="navcat">
         <ul class="home-list-category-2">
@@ -95,7 +94,7 @@
                 <% end %>
               </h3>
 
-              <i>by <%= review.book.author %></i>
+              <i>bởi <%= review.book.author %></i>
 
               <div class="book-status-<%= review.book.id %> book-review-change">
                 <%= render "user_books/change_statuses",
@@ -141,8 +140,7 @@
       </div>
     </div>
     <div class="col-sm-3 td-right-nav">
-      <h3>The goodreads blog</h3>
-      <p>4 Great New Book</p>
+      <p style="font-weight: 600;">Có thể bạn thích đọc?</p>
       <div class="col-sm-12 height-100">
         <div class="col-sm-5">
           <div class="row">
@@ -188,7 +186,7 @@
             <% end %>
           </div>
         </div>
-        <div class="col-sm-7">
+        <div class="col-sm-5">
           <div class="row">
             <% if @book_challenge.fifth && @book_challenge.fifth.image %>
               <%= link_to book_path(@book_challenge.fifth) do %>
@@ -208,20 +206,17 @@
       <div class="col-sm-12 td-home-footer">
         <div class="col-sm-6">
           <ul class="row">
-            <li><%= link_to "About Us", "#" %></li>
-            <li><%= link_to "Authors", "#" %></li>
-            <li><%= link_to "Our Blog", "#" %></li>
-            <li class="td-mobile"><%= link_to "Mobile Version", "#" %></li>
-            <li class="td-copyright"><%= link_to "© 2017 Goodreads", "#" %></li>
+            <li><%= link_to "Giới thiệu", "#" %></li>
+            <li><%= link_to "Các tác giả", "#" %></li>
           </ul>
         </div>
         <div class="col-sm-6">
           <ul>
-            <li><%= link_to "Advertise", "#" %></li>
-            <li><%= link_to "Terms", "#" %></li>
-            <li><%= link_to "Privacy", "#" %></li>
+            <li><%= link_to "Chính sách", "#" %></li>
+            <li><%= link_to "Điều khoản", "#" %></li>
           </ul>
         </div>
+        <div style="display: inline-block"><%= link_to "© 2017 BookReview", "#" %></div>
       </div>
     </div>
   <% end %>

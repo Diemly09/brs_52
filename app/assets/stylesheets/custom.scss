@@ -91,6 +91,7 @@ footer {
   padding-top: 5px;
   border-top: 1px solid rgba(234, 234, 234, 0.4);
   color: $gray-light;
+  height: 40px;
 
   a {
     color: $gray;footer
@@ -207,7 +208,7 @@ footer {
 }
 
 .header {
-  height: 60px;
+  min-height: 60px;
 
   a {
     border: none;
@@ -279,6 +280,7 @@ body {
 .logo{
     margin-top: 10px;
     display: block;
+    margin-bottom: -10px;
 }
 .panel-heading {
     border-bottom: 1px solid rgba(255, 255, 255, 0.45);
@@ -343,6 +345,7 @@ body {
 .td-right-nav {
     position: fixed;
     right: 0;
+    top: 75px;
 }
 .navcat{
   float: none;
@@ -495,12 +498,14 @@ body {
     img {
       width: 28px;
     height: auto;
+    margin-top: -5px;
     }
   }
 }
 
 .book_search {
-  padding-top: 20px;
+  padding-top: 13px;
+  min-width: 250px;
 
   p.inline-block {
     width: 100%;
@@ -616,8 +621,9 @@ body {
 }
 .row2 {
     min-height: calc(100vh - 50px);
-    height: calc(100vh - 50px);
+    //height: calc(100vh - 50px);
     margin-bottom: -40px;
+    margin-top: 20px;
   }
 .row {
     margin-left: 0px;
@@ -634,4 +640,39 @@ body {
 .new-request-button{
     padding: 5px 15px;
     margin: 20px 30px -35px 0px;
+}
+.search-header{
+    margin-left: -30px;
+}
+@media only screen and (min-width: 768px) and (max-width: 992px)  {
+  .header li {
+    display: inline-block;
+  }
+  .search-header {
+    display: none;
+  }
+  .col-sm-6.right-header{
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 768px){
+  .header li {
+    display: inline-block;
+  }
+  .search-header {
+    display: none;
+  }
+}
+@media only screen and (max-width: 635px){
+  .navbar-fixed-top {
+    top: -50px;
+    position: relative;
+  }
+}
+.td-book-index .book_search{
+    display: none;
+}
+.nav > li > a {
+    padding: 10px 10px;
+    padding-top: 20px;
 }

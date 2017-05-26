@@ -4,10 +4,10 @@
       <%= a.attribute_select associations: :category, class: "radius" %>
     <% end %>
   </div>
-  <div class="col-sm-2 columnsk none">
+  <div class="col-sm-2 columns none">
     <%= f.predicate_select Hash.new, class: "radius" %>
   </div>
-  <div class="col-sm-8 columns">
+  <div class="col-sm-6 columns">
     <%= f.value_fields do |v| %>
       <%= v.text_field :value, class: "radius form-control",
         placeholder: t("search") %>

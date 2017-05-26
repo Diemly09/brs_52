@@ -7,6 +7,9 @@ class Request < ApplicationRecord
 
   after_create :create_notification
   before_destroy :remove_notification
+  validates :title, presence: true
+  validates :author, presence: true
+  validates :publish_date, presence: true
 
   private
   def create_notification
